@@ -137,7 +137,7 @@ const languages = [
 
 export function Techstacks() {
     return (
-        <div className="pb-24">
+        <div>
             <br /><span className="flex justify-center items-center text-xl font-bold text-[#4b4c4f]">web dev</span><br />
             <div className="flex flex-row items-center justify-center mb-10 w-full">
                 <AnimatedTooltip items={webdev} />
