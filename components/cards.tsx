@@ -10,7 +10,7 @@ export function Cards() {
 }
 export const projects = [
     {
-        title: "chat-app",
+        title: "chat-app [building]",
         description:
             "chat room where users can chat with each other in real time, used socket.io, react, node.js, mongodb",
         link: "https://github.com/sankhadip-roy/chat-app",
@@ -37,7 +37,7 @@ export const projects = [
         title: "cv-application",
         description:
             "a simple cv application that allows users to input their personal information and display it in a cv format, used react, tailwind",
-        link: "https://github.com/sankhadip-roy/cv-application",
+        link: "https://cv-application-ruddy-phi.vercel.app",
     },
     {
         title: "wiki",
