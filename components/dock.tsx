@@ -26,7 +26,7 @@ export function Dock() {
             icon: (
                 <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
             ),
-            href: "#",
+            href: "/allprojects",
         },
         {
             title: "github",

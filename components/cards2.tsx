@@ -208,9 +208,10 @@ const cards = [
     {
         description: "codecult-org project 2",
         title: "codescholar writers",
-        src: "https://github.com/user-attachments/assets/1d0c7c2c-da0b-49f3-bd8c-24c8d04c9aab",
+        src: "/assets/codescholar.png",
+        //https://github.com/user-attachments/assets/1d0c7c2c-da0b-49f3-bd8c-24c8d04c9aab
         ctaText: "link",
-        ctaLink: "https://codescholarwriters.com/",
+        ctaLink: "https://codescholarwriters.com",
         content: () => {
             return (
                 <p>
@@ -222,7 +223,8 @@ const cards = [
     {
         description: "codecult-org project 1",
         title: "biswas medical hall",
-        src: "https://github.com/user-attachments/assets/1cfb8212-54cf-4d9a-81a2-964654d5e7c2",
+        src: "/assets/biswasmedicalhall.png",
+        //https://github.com/user-attachments/assets/1cfb8212-54cf-4d9a-81a2-964654d5e7c2
         ctaText: "link",
         ctaLink: "https://www.biswasmedicalhall.com",
         content: () => {
