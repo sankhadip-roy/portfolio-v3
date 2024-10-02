@@ -1,9 +1,3 @@
-/**
- * Note: Use position fixed according to your needs
- * Desktop navbar is better positioned at the bottom
- * Mobile navbar is better positioned at bottom right.
- **/
-
 import { cn } from "@/lib/utils";
 import { IconLayoutNavbarCollapse } from "@tabler/icons-react";
 import {
@@ -22,7 +16,7 @@ export const FloatingDock = ({
     desktopClassName,
     mobileClassName,
 }: {
-    items: { title: string; icon: React.ReactNode; href: string }[];
+    items: { title: string; icon: React.ReactNode; href: string; hideOn?: string[] }[];
     desktopClassName?: string;
     mobileClassName?: string;
 }) => {
@@ -38,17 +32,17 @@ const FloatingDockMobile = ({
     items,
     className,
 }: {
-    items: { title: string; icon: React.ReactNode; href: string }[];
+    items: { title: string; icon: React.ReactNode; href: string; hideOn?: string[] }[];
     className?: string;
 }) => {
     const [open, setOpen] = useState(false);
     return (
-        <div className={cn("relative block md:hidden", className)}>
+        <div className={cn("fixed bottom-4 right-4 block md:hidden", className)}>
             <AnimatePresence>
                 {open && (
                     <motion.div
                         layoutId="nav"
-                        className="absolute bottom-full mb-2 inset-x-0 flex flex-col gap-2"
+                        className="absolute bottom-full right-0 mb-2 flex flex-col gap-2"
                     >
                         {items.map((item, idx) => (
                             <motion.div
@@ -81,9 +75,9 @@ const FloatingDockMobile = ({
             </AnimatePresence>
             <button
                 onClick={() => setOpen(!open)}
-                className="h-10 w-10 rounded-full bg-gray-50 dark:bg-neutral-800 flex items-center justify-center"
+                className="h-12 w-12 rounded-full bg-gray-50 dark:bg-neutral-800 flex items-center justify-center shadow-lg"
             >
-                <IconLayoutNavbarCollapse className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
+                <IconLayoutNavbarCollapse className="h-6 w-6 text-neutral-500 dark:text-neutral-400" />
             </button>
         </div>
     );
@@ -93,7 +87,7 @@ const FloatingDockDesktop = ({
     items,
     className,
 }: {
-    items: { title: string; icon: React.ReactNode; href: string }[];
+    items: { title: string; icon: React.ReactNode; href: string; hideOn?: string[] }[];
     className?: string;
 }) => {
     let mouseX = useMotionValue(Infinity);

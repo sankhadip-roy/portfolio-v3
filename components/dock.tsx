@@ -9,24 +9,27 @@ import {
     IconHome,
     IconTerminal2,
 } from "@tabler/icons-react";
-// import Image from "next/image";
+import { usePathname } from 'next/navigation';
 
 export function Dock() {
+    const pathname = usePathname();
+
     const links = [
         {
             title: "home",
             icon: (
                 <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
             ),
-            href: "#",
+            href: "/",
+            hideOn: ['/']
         },
-
         {
             title: "projects",
             icon: (
                 <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
             ),
             href: "/allprojects",
+            hideOn: ['/allprojects']
         },
         {
             title: "github",
@@ -57,11 +60,13 @@ export function Dock() {
             href: "mailto:sankhadiproy23@gmail.com",
         },
     ];
+
+    const filteredLinks = links.filter(link => !link.hideOn?.includes(pathname));
+
     return (
         <div className="fixed bottom-0 left-0 right-0 flex items-center justify-center w-full pb-8">
             <FloatingDock
-                // mobileClassName="translate-y-20" // only for demo, remove for production
-                items={links}
+                items={filteredLinks}
             />
         </div>
     );

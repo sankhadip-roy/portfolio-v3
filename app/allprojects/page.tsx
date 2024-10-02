@@ -1,6 +1,5 @@
 import { ExternalLink, Github } from "lucide-react"
 import Link from "next/link"
-
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 
@@ -18,6 +17,12 @@ const projects: Project[] = [
         description: "chat room where users can chat with each other in real time",
         stack: ["socket.io", "react", "node.js", "mongodb"],
         githubLink: "https://github.com/sankhadip-roy/chat-app"
+    },
+    {
+        name: "endoscopy-detection [building]",
+        description: "ml based image processing project to identify abnormalities in endoscopy images",
+        stack: ["cnn", "glcm", "gabor filter", "tensorflow"],
+        githubLink: "https://github.com/codecult-org/endoscopy-detection"
     },
     {
         name: "notes",
@@ -102,13 +107,19 @@ const projects: Project[] = [
         liveLink: "https://sankhadip-roy.github.io/weather-site",
         githubLink: "https://github.com/sankhadip-roy/to-do"
     },
+    {
+        name: "more",
+        description: "there are few more, check on github",
+        stack: ["..."],
+        githubLink: "https://github.com/sankhadip-roy"
+    },
 ]
 
 export default function PersonalProjects() {
     return (
         <div className="min-h-screen bg-black text-gray-100 p-4 sm:p-8">
             <h1 className=" p-5 pb-10 text-3xl sm:text-4xl font-bold mb-6 text-center text-white">all coding projects</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 pb-16">
                 {projects.map((project, index) => (
                     <Card key={index} className="bg-gray-800 border-gray-700 shadow-md flex flex-col">
                         <CardHeader className="p-4">
@@ -129,14 +140,14 @@ export default function PersonalProjects() {
                                 <Button asChild variant="secondary" size="sm" className="bg-gray-200 text-gray-800 hover:bg-gray-300 flex-grow sm:flex-grow-0">
                                     <Link href={project.liveLink} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
                                         <ExternalLink className="mr-2 h-4 w-4" />
-                                        Live Link
+                                        live link
                                     </Link>
                                 </Button>
                             )}
                             <Button asChild variant="secondary" size="sm" className="bg-gray-200 text-gray-800 hover:bg-gray-300 flex-grow sm:flex-grow-0">
                                 <Link href={project.githubLink} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
                                     <Github className="mr-2 h-4 w-4" />
-                                    GitHub
+                                    gitHub
                                 </Link>
                             </Button>
                         </CardFooter>
