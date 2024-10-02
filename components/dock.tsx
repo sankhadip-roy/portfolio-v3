@@ -8,6 +8,7 @@ import {
     IconBrandGmail,
     IconHome,
     IconTerminal2,
+    IconBrandLeetcode
 } from "@tabler/icons-react";
 import { usePathname } from 'next/navigation';
 
@@ -30,6 +31,13 @@ export function Dock() {
             ),
             href: "/allprojects",
             hideOn: ['/allprojects']
+        },
+        {
+            title: "leetcode",
+            icon: (
+                <IconBrandLeetcode className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+            ),
+            href: "https://leetcode.com/u/sankhadip-roy",
         },
         {
             title: "github",
