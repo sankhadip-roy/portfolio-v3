@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { ExternalLink, Github } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -28,7 +29,7 @@ const projects: Project[] = [
         name: "notes",
         description: "notes app for storing personal notes",
         stack: ["next.js", "shadcn/ui", "typescript", "mongodb"],
-        liveLink: "https://notes-ivory-iota.vercel.app",
+        liveLink: "https://notes.sankhadiproy.me",
         githubLink: "https://github.com/sankhadip-roy/notes"
     },
     {
@@ -44,6 +45,13 @@ const projects: Project[] = [
         stack: ["next.js", "flask", "ml", "docker"],
         liveLink: "https://leaf-orpin.vercel.app",
         githubLink: "https://github.com/codecult-org"
+    },
+    {
+        name: "portfolio-v3",
+        description: "Third iteration of my personal website built with aceternity ui",
+        stack: ["next.js 14", "aceternity-ui", "shadcn/ui", "v0dev"],
+        liveLink: "https://sankhadiproy.me",
+        githubLink: "https://github.com/sankhadip-roy/portfolio-v3"
     },
     {
         name: "cv-application",
@@ -94,11 +102,11 @@ const projects: Project[] = [
         githubLink: "https://github.com/sankhadip-roy/search"
     },
     {
-        name: "portfolio",
-        description: "old portfolio website",
+        name: "portfolio-v1-v2",
+        description: "old portfolio websites",
         stack: ["html", "css", "js", "bootstrap"],
-        liveLink: "https://sankhadip-roy.github.io/portfolio",
-        githubLink: "https://github.com/sankhadip-roy/portfolio"
+        liveLink: "https://sankhadip-roy.github.io/portfolio-v1-v2",
+        githubLink: "https://github.com/sankhadip-roy/portfolio-v1-v2"
     },
     {
         name: "weather",
@@ -114,6 +122,14 @@ const projects: Project[] = [
         githubLink: "https://github.com/sankhadip-roy"
     },
 ]
+
+export const metadata: Metadata = {
+    title: 'projects',
+    description: 'all projects made by sankhadip roy',
+    icons: {
+        icon: '/favicons/favicon-projects.ico',
+    },
+};
 
 export default function PersonalProjects() {
     return (
