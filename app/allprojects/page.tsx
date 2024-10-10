@@ -20,22 +20,29 @@ const projects: Project[] = [
         githubLink: "https://github.com/sankhadip-roy/chat-app"
     },
     {
+        name: "walkman [building]",
+        description: "A mobile app inspired by Star-Lord's Walkman from Guardians of the Galaxy. This app allows users to play locally downloaded songs & features a retro UI design reminiscent of the classic Walkman",
+        stack: ["app-dev", "react-native", "expo", "android", 'ios'],
+        liveLink: "https://expo.dev/accounts/sankhadiproy/projects/walkman/builds/9768b449-7b42-4f9b-8851-63b728640b62",
+        githubLink: "https://github.com/sankhadip-roy/walkman"
+    },
+    {
         name: "endoscopy-detection [building]",
         description: "ml based image processing project to identify abnormalities in endoscopy images",
         stack: ["cnn", "glcm", "gabor filter", "tensorflow"],
         githubLink: "https://github.com/codecult-org/endoscopy-detection"
     },
     {
-        name: "notes",
-        description: "notes app for storing personal notes",
+        name: "mind-palace",
+        description: "This note-storing app serves as a database to store random thoughts, ideas, and information, ensuring nothing is forgotten and can be looked up in constant time. The name is inspired by Sherlock Holmes' mind palace technique",
         stack: ["next.js", "shadcn/ui", "typescript", "mongodb"],
-        liveLink: "https://notes.sankhadiproy.me",
-        githubLink: "https://github.com/sankhadip-roy/notes"
+        liveLink: "https://mind-palace.sankhadiproy.me",
+        githubLink: "https://github.com/sankhadip-roy/mind-palace"
     },
     {
         name: "commerce",
         description: "an eBay-like e-commerce auction site, deployed in homeserver",
-        stack: ["django", "sqlite", "docker"],
+        stack: ["django", "sqlite", "docker", "self-hosted"],
         liveLink: "https://sankha-commerce-serveit.codecult.tech",
         githubLink: "https://github.com/sankhadip-roy/commerce"
     },
@@ -113,7 +120,7 @@ const projects: Project[] = [
         description: "website for checking current information about weather",
         stack: ["html", "css", "js", "weather-api"],
         liveLink: "https://sankhadip-roy.github.io/weather-site",
-        githubLink: "https://github.com/sankhadip-roy/to-do"
+        githubLink: "https://github.com/sankhadip-roy/weather-site"
     },
     {
         name: "more",
